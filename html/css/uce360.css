@@ -1,0 +1,418 @@
+@font-face {
+	font-family: 'uceFont';
+	src: url('../fonts/mnzzyj.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/mnzzyj.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+             url('../fonts/mnzzyj.woff') format('woff'), /* Modern Browsers */
+             url('../fonts/mnzzyj.ttf')  format('truetype'), /* Safari, Android, iOS */
+             url('../fonts/mnzzyj.svg#uceFont') format('svg'); /* Legacy iOS */
+   }
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body ,html,h1,h2,p{
+  /*color: #5a5a5a;*/
+  font-family: uceFont,'微软雅黑',Arial;
+}
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+.navbar-wrapper .navbar {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+
+
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+  /* Remove the edge padding needed for mobile */
+  .marketing {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: -5 px;
+  }
+  .navbar-wrapper .container {
+    padding-left:  15px;
+    padding-right: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-left:  0;
+    padding-right: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+/* common */
+a,a:hover{
+	display:inline-block;
+	text-decoration:none;
+}
+
+a.wfont:hover{
+	color:#e96045;
+}
+ul{
+	list-style:none;
+}
+.opacity{ filter:alpha(opacity=30);-moz-opacity:0.3;opacity:0.3; -khtml-opacity: 0.3;}
+
+.green-bg{
+	background-color: #00a99d;
+}
+.red-bg{
+	background-color: #e96045;
+	color:#ffffff;
+}
+.section.red-bg .heading > h1{
+	color:#ffffff;
+}
+.section.red-bg .heading > p{
+	color:#ffffff;
+}
+.section{
+	position:relative;
+	top:-70px;
+}
+.sep-wrap{
+	position:relative;
+}
+.sep-icon{
+	position:absolute;
+	left:50%;
+	top:-48px;
+	margin-left:-43px;
+	z-index:10;
+}
+.radius {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.spance45{
+	padding:45px 0 0 0;
+}
+.spance55{
+	padding:55px 0 0 0;
+}
+/* font-color */
+.wfont{
+	color:#ffffff;
+}
+.bold{
+	font-weight:bold;
+}
+/* nav menu */
+.navbar-wrapper{
+	position:absolute;
+	top:-5px;
+	
+}
+.navbar-wrapper .navbar {
+	position:relative;
+	height:132px;
+}
+.navbar-wrapper .logo-wrap{
+	position:absolute;
+	left: -48px;
+	top: 14px;
+	width: 300px;
+}
+.navbar-wrapper .logo-wrap .logo-img{
+	float:left;
+}
+.navbar-wrapper .logo-wrap .logotxt-wrap{
+	float:left;
+	padding:10px 0 0 15px;
+	font-size:1.8em;
+}
+
+.navbar-wrapper .logo-wrap  .zhlogotxt{}
+.navbar-wrapper .logo-wrap  .enlogotxt{}
+.navbar-wrapper  .menu-wrap{
+	float:right;
+	text-align:center;
+	margin:48px 50px 0 0;
+}
+.navbar-wrapper  .menu-wrap .menu{
+	height:100%;
+}
+.navbar-wrapper  .menu-wrap .menu > li{
+	float:left;
+	padding:0 10px;
+}
+/* index */
+#indexPage {
+}
+
+#fullwidCarousel{
+	width:100%;
+	padding:0;
+} 
+
+#indexPage  #fullwidCarousel{
+	left:0;
+	height:600px;
+	margin-bottom:0;
+}
+#indexPage  #fullwidCarousel .carousel-inner > .item{
+	height:600px;
+}
+#indexPage  #fullwidCarousel .carousel-inner > .item > .container-wrap{
+	height:600px;
+}
+#indexPage  #fullwidCarousel .carousel-inner > .item  .container {
+	position:relative;
+}
+#indexPage  #fullwidCarousel .carousel-inner > .item  .container .carousel-pic1{
+	position:absolute;
+	top:210px;
+	left:0;
+}
+#indexPage  #fullwidCarousel .carousel-inner > .item  .container .carousel-caption1{
+	position:absolute;
+	top: 295px;
+	right:0;
+	width: 50%;
+}
+
+#indexPage  #fullwidCarousel .carousel-inner > .item  .container .carousel-pic2{
+	position:absolute;
+	top: 210px;
+	right:0;
+}
+#indexPage  #fullwidCarousel .carousel-inner > .item  .container .carousel-caption2{
+	position:absolute;
+	width: 50%;
+	top:295px;
+	left:0;
+}
+
+/* SERVICE CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.section {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.section .heading{
+	padding:30px 0;
+}
+.section .heading > h1{
+	color:#e96045;
+	font-size:2.3em;
+	font-weight:bold;
+}
+.section .heading > p{
+	color:#7d7d7d;
+}
+
+.section .service-list-wrap,
+.section .case-list-wrap{
+	
+}
+
+.section .client-list-wrap .col-lg-3 > .client-logo-img {
+	width:100%;
+}
+.section .case-list-wrap .item-wrap{
+	position:relative;
+}
+.section .case-list-wrap .item-wrap .overlay{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	text-align:center;
+	background:rgba(0,0,0,0.8);
+    background:#000 9;/*CSS Hack,只能对ie9以下浏览器ie6,ie7,ie8有效，否侧ie10,FF,Cherome会失去透明效果*/
+	filter:Alpha(opacity=80);
+    opacity:0.8;
+	display:none;
+}
+.section .case-list-wrap .item-wrap .overlay .info-wrap{
+	width:100%;
+	height:100%;
+	display:table;
+}
+
+.section .case-list-wrap .item-wrap .overlay  .info-wrap span{
+	display:table-cell;
+	vertical-align:middle;
+}
+/* Center align the text within the three columns below the carousel */
+.service .col-lg-3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.service h2 {
+  font-weight: normal;
+  text-align:center;
+}
+.service .col-lg-3 p {
+  margin-left: 10px;
+  margin-right: 10px;
+  color:#7d7d7d;
+}
+
+/* contactus */
+.contact-us{
+	position:relative;
+	height:500px;
+}
+.contact-us .map-wrap{
+	position:absolute;
+	background-color:#ccc;
+	top:0;
+	left:0;
+	width:100%;
+	height:500px;
+}
+.contact-us .overlay-bg{
+	position:absolute;
+	width:100%;
+	height:500px;
+	top:0;
+	right:0;
+	background:rgba(0,0,0,0.8);
+    background:#000 9;/*CSS Hack,只能对ie9以下浏览器ie6,ie7,ie8有效，否侧ie10,FF,Cherome会失去透明效果*/
+	filter:Alpha(opacity=80);
+    opacity:0.8;
+}
+
+.contact-us .overlay-wrap{
+	text-align:center;
+}
+.contact-us .overlay-wrap  .overlay-content{
+	display:relative;
+}
+.contact-us .overlay-wrap  .overlay-content > h1{
+	padding:40px 0 10px 0;
+	font-size:2em;
+	font-weight:bold;
+}
+.contact-us .overlay-wrap  .overlay-content p {
+	
+}
+.contact-us .overlay-wrap .para{
+	padding:15px 0;
+}
+.contact-us .overlay-wrap .email{
+	display:inline-block;
+	padding:3px 10px;
+	background-color:#00a99d;
+	
+}
+
+/* common footer */
+footer{
+	border-top:5px solid #777;
+	margin-top: -70px;
+	height:160px;
+	background-color:#000;
+}
+footer .container{
+	position:relative;
+	text-align:center;
+}
+
+footer .logo-pic{
+	position:absolute;
+	top:25px;
+	left:0;
+}
+footer .copyright{
+	line-height:155px;
+	margin:0;
+}
