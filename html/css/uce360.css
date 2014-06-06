@@ -162,6 +162,11 @@ ul{
 h2{
 	font-size:26px;
 }
+
+.nobtmpadding{
+	padding-bottom:0 !important;
+}
+
 .opacity{ filter:alpha(opacity=30);-moz-opacity:0.3;opacity:0.3; -khtml-opacity: 0.3;}
 
 .green-bg{
@@ -558,6 +563,7 @@ h2{
 	text-align:left;
 	font-size:1em;
 }
+
 
 /* common footer */
 footer{
