@@ -1,24 +1,10 @@
-var IndexModel = (function($){
+/*var Common = (function($){
 	function init(){
 		bindEvent();
 	}
 	
 	function bindEvent(){
-		$('.item-wrap').bind(
-			'mouseenter',
-			function(){
-				var $this = $(this);
-				
-				$this.children('.overlay').fadeIn(300);
-				
-			}
-		).bind(
-			'mouseleave',
-			function(){
-				var $this = $(this);
-				$this.children('.overlay').fadeOut(300);
-			}
-		);
+		
 	}
 	
 	return function(){
@@ -27,3 +13,31 @@ var IndexModel = (function($){
 		}
 	}
 })(jQuery);
+*/
+
+var UCE = {};
+$(document).ready(function(){
+	UCE.initSwitchList();
+	
+});
+
+UCE.initSwitchList = function(){
+	$('.switch-list > li a').bind(
+		'click',
+		function(){
+			var curHashVal = $(this).attr('href').substring(1);
+			
+			$('.switch-box').each(function(i,n){
+				if( $(n).hasClass(curHashVal) ){
+					$(n).removeClass('hide');
+				}else{
+					if( !$(n).hasClass('hide') ){
+						$(n).addClass('hide');
+					}
+				}
+			});
+			
+			return false;
+		}
+	);
+}
