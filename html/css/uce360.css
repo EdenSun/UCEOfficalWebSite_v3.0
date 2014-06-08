@@ -11,7 +11,7 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-body ,html,h1,h2,p{
+body ,html,h1,h2,h3,p{
   /*color: #5a5a5a;*/
   font-family: '微软雅黑',Arial;
 }
@@ -161,6 +161,12 @@ ul{
 
 h2{
 	font-size:26px;
+}
+
+h3{
+	font-size:14px;
+	font-weight:bold;
+	
 }
 
 .nobtmpadding{
@@ -563,7 +569,9 @@ h2{
 	text-align:left;
 	font-size:1em;
 }
-
+#aboutPage .contact-us{
+	height:auto;
+}
 
 /* common footer */
 footer{
