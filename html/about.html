@@ -11,7 +11,7 @@
     <meta name="author" content="daniel">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>产品 - 上海有策软件有限公司</title>
+    <title>关于我们 - 上海有策软件有限公司</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     <!-- Custom styles for this template -->
     <link href="css/uce360.css" rel="stylesheet">
 	<link href="css/non-responsive.css" rel="stylesheet">
-	
+	<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
   </head>
 <!-- NAVBAR  -->
   <body id="aboutPage">
@@ -104,7 +104,7 @@
 					
 					<h2><span class="glyphicon glyphicon-check"></span> 国家“双软”认定企业，领航产业三大产品系列</h2>
 					<div>
-						上海有策信息产业股份公司，成立于2002年6月7日，于2011年12月份完成股份制改造，目前注册资金718万元。公司专注于教育产业，是一家集教育软件研发、生产和销售为一体的高新技术产业，获得国家软件企业和国家软件产品“双软”认定。作为专业高等教育研究服务机构，有策在帮助高校开展实践教学方面有十余年的成功经验，公司自主研发实力和销售服务均处于行业领先水平，现有涵盖公共管理、电子商务、人力资源、法学、经济管理及教务管理等六大类全系列的实践教学软件。在商务部电子商务与信息化司和教育部高教司的指导下，有策联合高等教育出版社、浙江大学、北京邮电大学等八家单位发起的中国电子商务案例中心于2013年12月20日正式揭牌成立。
+						上海有策软件有限公司，成立于2012年6月，目前注册资金100万元。公司专注于教育产业，是一家集教育软件研发、生产和销售为一体的高新技术产业，获得国家软件企业和国家软件产品“双软”认定。作为专业高等教育研究服务机构，有策在帮助高校开展实践教学方面有十余年的成功经验，公司自主研发实力和销售服务均处于行业领先水平，现有涵盖公共管理、电子商务、人力资源、法学、经济管理及教务管理等六大类全系列的实践教学软件。在商务部电子商务与信息化司和教育部高教司的指导下，有策联合高等教育出版社、浙江大学、北京邮电大学等八家单位发起的中国电子商务案例中心于2013年12月20日正式揭牌成立。
 					</div>
 					
 					<h2><span class="glyphicon glyphicon-check"></span> 高市场覆盖，超2000家高校客户</h2>
@@ -703,12 +703,112 @@
 					</ul>
 					
 					<hr />
-					
+					<!--
 					<iframe width="600" height="380" 
 						frameborder="0" 
 						scrolling="no" marginheight="0" marginwidth="0" 
 						src="http://ditu.google.cn/maps?f=q&amp;source=s_q&amp;hl=zh-CN&amp;geocode=&amp;q=%E4%B8%8A%E6%B5%B7%E5%B8%82%E4%B8%8A%E6%B5%B7%E9%97%B5%E8%A1%8C%E5%8C%BA%E4%B8%AD%E6%98%A5%E8%B7%AF7628%E5%8F%B7&amp;aq=0&amp;oq=%E4%B8%AD%E6%98%A5%E8%B7%AF7628&amp;sll=31.230416,121.473701&amp;sspn=1.655707,3.34259&amp;brcurrent=3,0x35b26382b30b0dd7:0xea69569dfe157228,0,0x35b2633be24b87d5:0xde5e102b16be8828%3B5,0,0&amp;ie=UTF8&amp;hq=&amp;hnear=%E4%B8%8A%E6%B5%B7%E5%B8%82%E9%97%B5%E8%A1%8C%E5%8C%BA%E4%B8%AD%E6%98%A5%E8%B7%AF7628%E5%8F%B7&amp;ll=31.146231,121.343756&amp;spn=0.025893,0.052228&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+					-->
 					
+					
+				  <!--百度地图容器-->
+				  <div style="width:697px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+
+					<script type="text/javascript">
+						//创建和初始化地图函数：
+						function initMap(){
+							createMap();//创建地图
+							setMapEvent();//设置地图事件
+							addMapControl();//向地图添加控件
+							addMarker();//向地图中添加marker
+						}
+						
+						//创建地图函数：
+						function createMap(){
+							var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+							var point = new BMap.Point(121.343936,31.154742);//定义一个中心点坐标
+							map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
+							window.map = map;//将map变量存储在全局
+						}
+						
+						//地图事件设置函数：
+						function setMapEvent(){
+							map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+							map.disableScrollWheelZoom();//禁用地图滚轮放大缩小，默认禁用(可不写)
+							map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+							map.enableKeyboard();//启用键盘上下左右键移动地图
+						}
+						
+						//地图控件添加函数：
+						function addMapControl(){
+							//向地图中添加缩放控件
+						var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+						map.addControl(ctrl_nav);
+									//向地图中添加比例尺控件
+						var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+						map.addControl(ctrl_sca);
+						}
+						
+						//标注点数组
+						var markerArr = [{title:"上海有策软件有限公司",content:"我的备注",point:"121.349425|31.151837",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+							 ];
+						//创建marker
+						function addMarker(){
+							for(var i=0;i<markerArr.length;i++){
+								var json = markerArr[i];
+								var p0 = json.point.split("|")[0];
+								var p1 = json.point.split("|")[1];
+								var point = new BMap.Point(p0,p1);
+								var iconImg = createIcon(json.icon);
+								var marker = new BMap.Marker(point,{icon:iconImg});
+								var iw = createInfoWindow(i);
+								var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+								marker.setLabel(label);
+								map.addOverlay(marker);
+								label.setStyle({
+											borderColor:"#808080",
+											color:"#333",
+											cursor:"pointer"
+								});
+								
+								(function(){
+									var index = i;
+									var _iw = createInfoWindow(i);
+									var _marker = marker;
+									_marker.addEventListener("click",function(){
+										this.openInfoWindow(_iw);
+									});
+									_iw.addEventListener("open",function(){
+										_marker.getLabel().hide();
+									})
+									_iw.addEventListener("close",function(){
+										_marker.getLabel().show();
+									})
+									label.addEventListener("click",function(){
+										_marker.openInfoWindow(_iw);
+									})
+									if(!!json.isOpen){
+										label.hide();
+										_marker.openInfoWindow(_iw);
+									}
+								})()
+							}
+						}
+						//创建InfoWindow
+						function createInfoWindow(i){
+							var json = markerArr[i];
+							var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+							return iw;
+						}
+						//创建一个Icon
+						function createIcon(json){
+							var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+							return icon;
+						}
+						
+						initMap();//创建和初始化地图
+					</script>
+
 					<hr />	
 					
 				</div>
